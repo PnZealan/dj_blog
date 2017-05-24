@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh_CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Init apher– Blog</title>
+<meta name="description" content="Articles about python">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<meta property="og:title" content="Init apher – Blog">
+<meta property="og:description" content="Articles about python and other things.">
+
+
+<link rel="stylesheet" href="{% static "css.css" %}" type = "text/css">
+<link rel="stylesheet" href="{% static "first.css"%}"type = "text/css">
+
+</head><body><header class="Header" role="banner">
+  <div class="Container">
+    <div class="Header-logo">
+    <a href='/'>
+      <img src="{% static "imge/img.png"%}" width="100" height="100" alt="">
+     <span class="Header-prompt">Home</span>
+     </a>
+    </div>
+    <h1 class="Header-title">Words and pictures</h1>
+  </div>
+</header>
+
+
+<div class="Content" role="main">
+  
+
+<section class="Container">
+
+<ul class="List">
+{% block bodycontent %}
+
+
+{% endblock %}
+</ul>
+
+</section>
+
+
+</div>
+
+<footer class="Footer" role="contentinfo">
+  <div class="Container">
+    <div class="HzLine"></div>
+    <a class="twitter-follow-button" href="#" data-show-count="false" data-lang="en" data-size="large">Follow @init-0</a>
+    <p class="Footer-links">
+      <a href="#">About</a>
+      ·
+      <a href="#">Twitter</a>
+      <a href="#">GitHub</a>
+    </p>
+    <small class="Footer-legal">Copyright © init-0 er.</small>
+  </div>
+</footer>
+
+</body></html>
+

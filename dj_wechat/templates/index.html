@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{%load static%}
+
+{% block bodycontent %}
+{% for items in content %}
+
+<li class="List-item">
+    <div class="List-timestamp">
+      <time class="Timestamp" datetime="{{ items.time }}">{{ items.time }}</time>
+    </div>
+    <div class="List-text u-textTruncate">
+      <a href="{% url 'list' items.id %}" rel="bookmark" title="{{ items.title }}">{{ items.title }}</a>
+    </div>
+  </li>
+  
+  
+{% endfor %}
+
+{% endblock %}
